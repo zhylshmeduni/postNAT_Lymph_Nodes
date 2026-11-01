@@ -1,0 +1,64 @@
+defaults:
+  workers: 4
+
+customs:
+  train_run_id: "Lymph_Node_ABMIL_ReviewUNI"
+  manifest_file_path: "D:\\Python_project\\Macrosection\\Lymph_Nodes\\Files\\Review1026\\Lymph_trainvaltest_Review.xlsx"
+  features_save_path: "D:\\Digital_Pathology_Resources\\Feats\\Macrosection_Project\\Lymph_Feats\\UNI\\"
+  tissue_segment_path: ""
+  clinical_info_path: ""
+  feature_size: 1024
+  hparams_to_use: "1,2,3,4"
+
+hparams:
+  hparams_set1:
+    sampling_method: "random"
+    max_epochs: 50
+    earlystop_patience: 20
+    earlystop_min_epochs: 20
+    initial_lr: 0.001
+    milestones: "2, 5, 15, 30"
+    gamma_lr: 0.1
+    weight_decay: 0.001
+    model_size: "big"
+    p_dropout_fc: 0.5
+    p_dropout_atn: 0.25
+
+  hparams_set2:
+    sampling_method: "random"
+    max_epochs: 50
+    earlystop_patience: 20
+    earlystop_min_epochs: 20
+    initial_lr: 0.001
+    milestones: "2, 5, 15, 30"
+    gamma_lr: 0.1
+    weight_decay: 0.00001
+    model_size: "big"
+    p_dropout_fc: 0.5
+    p_dropout_atn: 0.25
+
+  hparams_set3:
+    sampling_method: "random"
+    max_epochs: 50
+    earlystop_patience: 20
+    earlystop_min_epochs: 20
+    initial_lr: 0.0001
+    milestones: "5, 15, 30"
+    gamma_lr: 0.1
+    weight_decay: 0.00001
+    model_size: "big"
+    p_dropout_fc: 0.5
+    p_dropout_atn: 0.25
+
+  hparams_set4:
+    sampling_method: "random"
+    max_epochs: 150
+    earlystop_patience: 20
+    earlystop_min_epochs: 20
+    initial_lr: 0.00001
+    milestones: "10, 30"
+    gamma_lr: 0.1
+    weight_decay: 0.00001
+    model_size: "big"
+    p_dropout_fc: 0.5
+    p_dropout_atn: 0.25
